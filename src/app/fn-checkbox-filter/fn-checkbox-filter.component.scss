@@ -1,0 +1,120 @@
+.filter_btn {
+  background-color: #fff;
+  color: #777;
+  border: 1px solid #777;
+  border-radius: 30px;
+  width: 250px;
+  margin-top: 10px;
+  padding: 4px 10px;
+  text-align: left;
+}
+
+.filter_btn:focus,
+.filter_btn:active,
+.filter_btn:hover {
+  box-shadow: none;
+}
+
+.filter_btn i {
+  margin-left: 10px;
+  float: right;
+  top: 18px;
+  position: absolute;
+  right: 8px;
+}
+
+.filter_btn:after {
+  display: none;
+}
+
+.filter_data {
+  width: 250px;
+  background-color: #fff;
+  padding: 10px;
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .15);
+  max-height: 230px;
+  overflow-x: hidden;
+}
+
+.filter_data input {
+  padding-right: 40px;
+}
+
+.filter_data input:focus {
+  box-shadow: none;
+}
+
+.filter_data .search_icon {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  cursor: pointer;
+}
+
+.filter_data li {
+  color: #424242;
+  font-size: 14px;
+  border-radius: 4px;
+  float: left;
+  width: 100%;
+}
+
+.filter_data li a {
+  text-decoration: none;
+}
+
+.filter_data li div {
+  padding: 5px 6px;
+}
+
+.filter_data li>div:hover {
+  background-color: #f8f9f9;
+  color: #787a7b;
+}
+
+.filter_data li i {
+  font-size: 14px;
+}
+
+.filter_data li span {
+  margin-right: 5px;
+  width: auto;
+  display: inline-block;
+}
+
+.filter_data li:first-child {
+  cursor: default;
+  background-color: transparent;
+  padding: 0 0 5px 0;
+}
+
+.filter_data li:nth-child(2) {
+  cursor: default;
+}
+
+.filter_data li .sub_role {
+  color: #a9a9a9;
+  font-size: 13px;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+
+.filter_data li .sub_role:hover {
+  background-color: transparent;
+}
+
+.filter_data li .sub_role .sub_role_data {
+  cursor: pointer;
+  float: left;
+  width: 100%;
+  margin-bottom: 1px;
+  padding: 5px 6px 5px 22px;
+}
+
+.filter_data li .sub_role .sub_role_data:hover {
+  background-color: #f8f9f9;
+  color: #787a7b;
+}

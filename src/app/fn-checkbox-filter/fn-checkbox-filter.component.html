@@ -1,0 +1,31 @@
+<div id="fn-checkbox-filter-container" class="dropdown" (click)="toggleSelect(true)">
+  <button type="button" class="btn btn-default dropdown-toggle filter_btn" ngDefaultControl [(ngModel)]="selectedMap"
+    data-toggle="dropdown"><span class="pull-left" [innerHtml]="description"></span>
+    <i class="fa fa-filter fa-fw"></i>
+  </button>
+  <ul class="dropdown-menu filter_data show fn-multi-drop-ul" *ngIf="showDropDown">
+    <li> <input type="text" placeholder="Search.." [(ngModel)]="searchInput" (keyup)="onSearch($event)" maxlength="40"
+        class="form-control"><i class="fa fa-times-circle-o search_icon" (click)="refreshSearch()"></i>
+    </li>
+    <li>
+      <div class="row m-0">
+        <div class="col-6"><a (click)="selectAction(true)">Select all</a></div>
+        <div class="col-6 text-right"><a (click)="selectAction(false)">Clear</a>
+        </div>
+      </div>
+    </li>
+    <li *ngFor="let uiItem of uiFilterArray; let i=index;" [value]="uiItem.id">
+      <div (click)="selectParent(uiItem)">
+        <span><i [ngClass]="{'fa fa-check': uiItem.isSelected}"></i></span>
+        {{uiItem.description}}</div>
+      <div class="sub_role" *ngIf="isGrouping">
+        <ng-container *ngFor="let childItem of uiItem.childArray">
+          <div class="sub_role_data" (click)="selectChildItem(childItem)">
+            <span><i [ngClass]="{'fa fa-check': childItem.isSelected}"></i></span>
+            <span>{{childItem.description}}</span>
+          </div>
+        </ng-container>
+      </div>
+    </li>
+  </ul>
+</div>
